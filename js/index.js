@@ -56,11 +56,25 @@ navItem[4].textContent = siteContent.nav["nav-item-5"];
 navItem[5].textContent = siteContent.nav["nav-item-6"];
 
 navItem.forEach((link) => {
+  // link.textContent = siteContent.nav["nav-item-1"]
   link.style.color = "green";
 })
 
+// ------this works----
 let h1 = document.querySelector('h1');
 h1.textContent = siteContent.cta.h1;
+h1.style.wordSpacing = '500px';
+
+
+// let br = document.createElement("br")
+
+// let h1 = document.querySelector('h1');
+// let newH1 = siteContent.cta.h1.split(" ");
+// let dom = newH1[0];
+// let is = `${newH1[1]} ${newH1[2]}`;
+// h1.textContent = dom + is;
+
+// let h1 = document.querySelector('h1').innerHTML
 
 let button = document.querySelector('button');
 button.textContent = siteContent.cta.button;
@@ -84,6 +98,9 @@ p[6].textContent = siteContent.contact.phone;
 p[7].textContent = siteContent.contact.email;
 p[8].textContent = siteContent.footer.copyright;
 
+let contact = document.querySelector('.contact');
+contact.style.width = '150px';
+
 let domNav = document.querySelector('nav');
 
 let linkSignup = document.createElement('a');
@@ -99,12 +116,3 @@ linkTraining.style.color = 'green';
 domNav.appendChild(linkTraining);
 
 
-// let linkNodeText = document.createTextNode('Link01');
-
-// linkNode.appendChild(linkNodeText);
-// navItem.appendChild(linkNode);
-
-// let newLink02 = document.createTextNode('Link02');
-
-// navItem.appendChild(newLink01);
-// navItem.prepend(newLink02);
