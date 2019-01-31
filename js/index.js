@@ -39,4 +39,89 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent.nav["img-src"])
+
+let headerImg = document.getElementById("cta-img");
+headerImg.setAttribute('src', siteContent.cta["img-src"])
+
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let navItem = document.querySelectorAll('a');
+navItem[0].textContent = siteContent.nav["nav-item-1"];
+navItem[1].textContent = siteContent.nav["nav-item-2"];
+navItem[2].textContent = siteContent.nav["nav-item-3"];
+navItem[3].textContent = siteContent.nav["nav-item-4"];
+navItem[4].textContent = siteContent.nav["nav-item-5"];
+navItem[5].textContent = siteContent.nav["nav-item-6"];
+
+navItem.forEach((link) => {
+  // link.textContent = siteContent.nav["nav-item-1"]
+  link.style.color = "green";
+})
+
+// ------this works----
+let h1 = document.querySelector('h1');
+h1.textContent = siteContent.cta.h1;
+h1.style.wordSpacing = '500px';
+
+
+// let br = document.createElement("br")
+
+// let h1 = document.querySelector('h1');
+// let newH1 = siteContent.cta.h1.split(" ");
+// let dom = newH1[0];
+// let is = `${newH1[1]} ${newH1[2]}`;
+// h1.textContent = dom + is;
+
+// let h1 = document.querySelector('h1').innerHTML
+
+let button = document.querySelector('button');
+button.textContent = siteContent.cta.button;
+
+let h4 = document.querySelectorAll('h4');
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+h4[5].textContent = siteContent.contact["contact-h4"];
+
+let p = document.querySelectorAll('p');
+p[0].textContent = siteContent["main-content"]["features-content"];
+p[1].textContent = siteContent["main-content"]["about-content"];
+p[2].textContent = siteContent["main-content"]["services-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
+p[4].textContent = siteContent["main-content"]["vision-content"];
+p[5].textContent = siteContent.contact.address;
+p[6].textContent = siteContent.contact.phone;
+p[7].textContent = siteContent.contact.email;
+p[8].textContent = siteContent.footer.copyright;
+
+let contact = document.querySelector('.contact');
+contact.style.width = '150px';
+
+let domNav = document.querySelector('nav');
+
+let linkSignup = document.createElement('a');
+linkSignup.setAttribute('href', '#');
+linkSignup.textContent = 'Sign Up';
+linkSignup.style.color = 'green';
+domNav.prepend(linkSignup);
+
+let linkTraining = document.createElement('a');
+linkTraining.setAttribute('href', '#');
+linkTraining.textContent = 'Training';
+linkTraining.style.color = 'green';
+domNav.appendChild(linkTraining);
+
+
+//----STRETCH: Event----
+
+let buttonEvent = function () {
+  h1.textContent = "Thanks A Meow!";
+  navItem.forEach((link) => {
+    link.style.color = "pink";
+    headerImg.setAttribute('src', "img/kitty.png");
+  })
+}
