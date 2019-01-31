@@ -84,7 +84,19 @@ p[6].textContent = siteContent.contact.phone;
 p[7].textContent = siteContent.contact.email;
 p[8].textContent = siteContent.footer.copyright;
 
+let linkSignup = document.createElement('a');
+linkSignup.setAttribute('href', '#');
+linkSignup.textContent = 'Sign Up';
+linkSignup.style.color = 'green';
+let domNav = document.querySelector('nav');
+domNav.prepend(linkSignup);
 
+let linkTraining = document.createElement('a');
+linkTraining.setAttribute('href', '#');
+linkTraining.textContent = 'Training';
+linkTraining.style.color = 'green';
+let domNav = document.querySelector('nav');
+domNav.appendChild(linkTraining);
 
 
 // let linkNodeText = document.createTextNode('Link01');
