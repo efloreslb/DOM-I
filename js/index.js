@@ -116,3 +116,12 @@ linkTraining.style.color = 'green';
 domNav.appendChild(linkTraining);
 
 
+//----STRETCH: Event----
+
+let buttonEvent = function () {
+  h1.textContent = "Thanks A Meow!";
+  navItem.forEach((link) => {
+    link.style.color = "pink";
+    headerImg.setAttribute('src', "img/kitty.png");
+  })
+}
